@@ -45,76 +45,86 @@
 
     <div class="cd-schedule__events">
       <ul>
+       
         <li class="cd-schedule__group">
           <div class="cd-schedule__top-info"><span>Monday</span></div>
-
           <ul>
             {% for i in data %}
+            {%if i.day == 'Pazartesi'%}
               <li class="cd-schedule__event">
                 <a data-start= "{{ i.start_time }}" data-end="{{ i.end_time }}" data-content="event-abs-circuit" data-event="event-1" href="#0">
                   <em class="cd-schedule__name">{{ i.course_title }}</em>
                 </a>
-              </li>
-            {% endfor %}
+              </li>       
+              {%endif%}
+              {% endfor %}
           </ul>
         </li>
+
 
         <li class="cd-schedule__group">
           <div class="cd-schedule__top-info"><span>Tuesday</span></div>
 
           <ul>
             {% for i in data %}
+            {%if i.day == 'Salı'%}
               <li class="cd-schedule__event">
                 <a data-start= "{{ i.start_time }}" data-end="{{ i.end_time }}" data-content="event-abs-circuit" data-event="event-2" href="#0">
                   <em class="cd-schedule__name">{{ i.course_title }}</em>
                 </a>
               </li>
-            {% endfor %}
+              {%endif%}
+              {% endfor %}
           </ul>
         </li>
 
         <li class="cd-schedule__group">
           <div class="cd-schedule__top-info"><span>Wednesday</span></div>
-
           <ul>
             {% for i in data %}
+            {%if i.day == 'Çarşamba'%}
               <li class="cd-schedule__event">
                 <a data-start= "{{ i.start_time }}" data-end="{{ i.end_time }}" data-content="event-abs-circuit" data-event="event-3" href="#0">
                   <em class="cd-schedule__name">{{ i.course_title }}</em>
                 </a>
               </li>
-            {% endfor %}
+              {%endif%}
+              {% endfor %}    
           </ul>
         </li>
 
         <li class="cd-schedule__group">
           <div class="cd-schedule__top-info"><span>Thursday</span></div>
-
           <ul>
             {% for i in data %}
+            {%if i.day == 'Perşembe'%}
               <li class="cd-schedule__event">
-                <a data-start= "{{ i.start_time }}" data-end="{{ i.end_time }}" data-content="event-abs-circuit" data-event="event-1" href="#0">
+                <a data-start= "{{ i.start_time }}" data-end="{{ i.end_time }}" data-content="event-abs-circuit" data-event="event-4" href="#0">
                   <em class="cd-schedule__name">{{ i.course_title }}</em>
                 </a>
               </li>
-            {% endfor %}
+              {%endif%}
+              {% endfor %}
           </ul>
         </li>
 
         <li class="cd-schedule__group">
           <div class="cd-schedule__top-info"><span>Friday</span></div>
-
           <ul>
             {% for i in data %}
+            {%if data.day == 'Cuma'%}
               <li class="cd-schedule__event">
                 <a data-start= "{{ i.start_time }}" data-end="{{ i.end_time }}" data-content="event-abs-circuit" data-event="event-1" href="#0">
                   <em class="cd-schedule__name">{{ i.course_title }}</em>
                 </a>
               </li>
-            {% endfor %}
+              {%endif%}
+              {% endfor %}
           </ul>
         </li>
       </ul>
+
+
     </div>
 
     <div class="cd-schedule-modal">
