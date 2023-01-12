@@ -15,7 +15,9 @@
     <h1 class="text-xl">BEESOCIAL</h1>
   </header>
   <form action="" method="POST">
+    {% csrf_token %}
     {{ form }}
+    
     <input class="btn btn-primary" type='submit' name='Submit'>
   </form>
   <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
