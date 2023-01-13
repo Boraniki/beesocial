@@ -16,3 +16,4 @@ class Courses(models.Model):
     major_restriction = models.CharField(max_length=100, default=None, blank=True, null=True)
     prerequisites = models.CharField(max_length=100, default=None, blank=True, null=True)
     class_rest = models.CharField(max_length=100, default=None, blank=True, null=True)
+
