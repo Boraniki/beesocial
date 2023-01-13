@@ -17,7 +17,7 @@
   <form action="" method="POST">
     {% csrf_token %}
     {{ form }}
-    
+
     <input class="btn btn-primary" type='submit' name='Submit'>
   </form>
   <div class="cd-schedule cd-schedule--loading margin-top-lg margin-bottom-lg js-cd-schedule">
@@ -47,7 +47,7 @@
 
     <div class="cd-schedule__events">
       <ul>
-       
+
         <li class="cd-schedule__group">
           <div class="cd-schedule__top-info"><span>Monday</span></div>
           <ul>
@@ -57,7 +57,7 @@
                 <a data-start= "{{ i.start_time }}" data-end="{{ i.end_time }}" data-content="event-abs-circuit" data-event="event-1" href="#0">
                   <em class="cd-schedule__name">{{ i.course_title }}</em>
                 </a>
-              </li>       
+              </li>
               {%endif%}
               {% endfor %}
           </ul>
@@ -91,7 +91,7 @@
                 </a>
               </li>
               {%endif%}
-              {% endfor %}    
+              {% endfor %}
           </ul>
         </li>
 

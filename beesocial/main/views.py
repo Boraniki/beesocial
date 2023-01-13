@@ -11,7 +11,7 @@ def home(request):
                                       course_code=request.POST['course_code'],
                                       course_title=request.POST['course_title'])
         context = {'data':data, 'form':form}
-        return render(request, 'main/index.html', {'form':form,'data':data[:10]})
-
-    context = {'form':form}
-    return render(request, 'main/index.html', {'form':form})
+        return render(request, 'main/index.html', context)
+    else:
+        context = {'form':form}
+        return render(request, 'main/index.html', {'form':form})
