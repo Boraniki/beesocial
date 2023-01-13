@@ -80,8 +80,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'beesocial',
         'USER': 'postgres',
-        'PASSWORD': 'Besocial1234',
-        'HOST': 'database-1.cvultah4yuxd.us-west-2.rds.amazonaws.com',
+        'PASSWORD': 'wywfon-xuhqef-3naZge',
+        'HOST': 'database-1.cymshmabvyee.eu-central-1.rds.amazonaws.com',
         'PORT': '5432'
     }
 }
