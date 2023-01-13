@@ -7,11 +7,13 @@ def home(request):
     form = CoursesForm()
     if request.method == 'POST':
         form = CoursesForm(request.POST)
-        data = Courses.objects.filter(crn=request.POST['crn'],
-                                      course_code=request.POST['course_code'],
-                                      course_title=request.POST['course_title'])
+        data = Courses.objects.filter(
+        crn=request.POST['crn'])
+
         context = {'data':data, 'form':form}
         return render(request, 'main/index.html', context)
-    else:
-        context = {'form':form}
-        return render(request, 'main/index.html', {'form':form})
+
+
+
+    context = {'form':form}
+    return render(request, 'main/index.html', {'form':form})
